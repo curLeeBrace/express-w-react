@@ -10,13 +10,11 @@ const HomePage = () => {
    
   },[])
 
-
     return (
         <div className="App_Container">
             <button onClick={()=>setBool(!Bool)}>Toggle button</button>
 
               <button id = "counter_btn" onClick={()=>setCount(prevCount => prevCount + 1)}>Counter</button>
-              
 
             { 
            
