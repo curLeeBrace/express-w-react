@@ -4,6 +4,7 @@ import PageNotFound from "./components/404";
 import NavBar from "./components/NavBar";
 import { Milktea }  from "./components/Milktea";
 import { Shake } from "./components/Shake";
+import { MilkteaFlavor } from "./components/MilkTeaFlavor";
 
 import {Route, Routes } from "react-router-dom";
 import List from "./components/List";
@@ -16,7 +17,11 @@ function App() {
            <Route path="/about" element = {<About/>}/>
          
            <Route path = "/list" element = {<List/>}>
-              <Route path = "milktea" element = {<Milktea/>}/>
+              <Route path = "milktea" element = {<Milktea/>}>
+                
+                <Route path=":flavor" element = {<MilkteaFlavor/>}/>
+
+              </Route>
               <Route path = "shake" element = {<Shake/>}/>
            </Route>
            <Route path = "*" element = {<PageNotFound/>}/>
